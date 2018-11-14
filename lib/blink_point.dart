@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:blinking_point/circle.dart';
 
 final color = [
   new PointModel(
@@ -16,8 +17,15 @@ class BlinkingPoint extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      home: new Scaffold(
-        backgroundColor: viewModel.color,
+      home: new Container(
+        height: 100.0,
+        width: 100.0,
+        child: new CustomPaint(
+          foregroundPainter: Circle(
+            lineColor: Colors.amber,
+            pointSize: 10.0,
+          ),
+        ),
       ),
     );
   }
