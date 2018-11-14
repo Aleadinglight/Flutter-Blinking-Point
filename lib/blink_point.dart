@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-final modelColor = [
+final color = [
   new PointModel(
     Colors.red,
   ),
