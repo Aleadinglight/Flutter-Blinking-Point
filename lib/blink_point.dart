@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:blinking_point/circle.dart';
+import 'package:flutter/animation.dart';
 
 final color = [
   new PointModel(
@@ -7,12 +8,25 @@ final color = [
   ),
 ];
 
-class BlinkingPoint extends StatelessWidget {
-  final PointModel viewModel;
+class BlinkingPoint extends StatefulWidget {
+  final Color pointColor;
+  final double pointSize;
 
   BlinkingPoint({
-    this.viewModel,
+    this.pointColor,
+    this.pointSize,
   });
+
+  @override
+  _BlinkingPointState createState() => new _BlinkingPointState();
+}
+
+class _BlinkingPointState extends State<BlinkingPoint> {
+  @override
+  void initState() {
+    super.initState();
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +36,8 @@ class BlinkingPoint extends StatelessWidget {
         width: 100.0,
         child: new CustomPaint(
           foregroundPainter: Circle(
-            color: Colors.amber,
-            pointSize: 10.0,
+            color: widget.pointColor,
+            pointSize: widget.pointSize,
           ),
         ),
       ),
