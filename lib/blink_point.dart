@@ -9,10 +9,14 @@ final color = [
 ];
 
 class BlinkingPoint extends StatefulWidget {
+  final double x_coor;
+  final double y_coor;
   final Color pointColor;
   final double pointSize;
 
   BlinkingPoint({
+    this.x_coor,
+    this.y_coor,
     this.pointColor,
     this.pointSize,
   });
@@ -22,10 +26,19 @@ class BlinkingPoint extends StatefulWidget {
 }
 
 class _BlinkingPointState extends State<BlinkingPoint> {
+  Animation<double> animation;
+  AnimationController controller;
+
   @override
   void initState() {
     super.initState();
     setState(() {});
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -36,6 +49,8 @@ class _BlinkingPointState extends State<BlinkingPoint> {
         width: 100.0,
         child: new CustomPaint(
           foregroundPainter: Circle(
+            x_coor: widget.x_coor,
+            y_coor: widget.y_coor,
             color: widget.pointColor,
             pointSize: widget.pointSize,
           ),
