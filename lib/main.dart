@@ -39,12 +39,12 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return new BlinkingPoint(
-      x_coor: 200.0,
-      y_coor: 500.0,
+    /*return new BlinkingPoint(
+      xCoor: 200.0,
+      yCoor: 500.0,
       pointColor: Colors.red,
       pointSize: 20.0,
-    );
-    //return new Loader();
+    );*/
+    return new LmaoApp();
   }
 }

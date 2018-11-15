@@ -5,13 +5,13 @@ import 'dart:ui';
 class Circle extends CustomPainter {
   final Color color;
   final double pointSize;
-  final double x_coor;
-  final double y_coor;
+  final double xCoor;
+  final double yCoor;
   Circle({
     this.color,
     this.pointSize,
-    this.x_coor,
-    this.y_coor,
+    this.xCoor,
+    this.yCoor,
   });
 
   @override
@@ -21,7 +21,7 @@ class Circle extends CustomPainter {
     line.strokeCap = StrokeCap.round;
     line.color = color;
     line.strokeWidth = pointSize / 2;
-    Offset center = new Offset(x_coor, y_coor / 2);
+    Offset center = new Offset(xCoor, yCoor / 2);
     double radius = pointSize;
 
     line.style = PaintingStyle.fill;

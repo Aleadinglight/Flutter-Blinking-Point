@@ -9,14 +9,14 @@ final color = [
 ];
 
 class BlinkingPoint extends StatefulWidget {
-  final double x_coor;
-  final double y_coor;
+  final double xCoor;
+  final double yCoor;
   final Color pointColor;
   final double pointSize;
 
   BlinkingPoint({
-    this.x_coor,
-    this.y_coor,
+    this.xCoor,
+    this.yCoor,
     this.pointColor,
     this.pointSize,
   });
@@ -25,37 +25,49 @@ class BlinkingPoint extends StatefulWidget {
   _BlinkingPointState createState() => new _BlinkingPointState();
 }
 
-class _BlinkingPointState extends State<BlinkingPoint> {
+class _BlinkingPointState extends State<BlinkingPoint>
+    with SingleTickerProviderStateMixin {
   Animation<double> animation;
-  AnimationController controller;
+  AnimationController animationController;
 
   @override
   void initState() {
     super.initState();
-    setState(() {});
+    animationController = AnimationController(
+      duration: const Duration(milliseconds: 2000),
+      vsync: this,
+    );
+    animation = Tween(begin: 0.0, end: 500.0).animate(animationController);
+    animation.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        animationController.reverse();
+      } else if (status == AnimationStatus.dismissed) {
+        animationController.forward();
+      }
+    });
   }
 
   @override
   void dispose() {
-    controller.dispose();
+    animationController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new Container(
-        height: 100.0,
-        width: 100.0,
-        child: new CustomPaint(
+    return new Container(
+      height: animation.value,
+      width: animation.value,
+      child:
+          /*new CustomPaint(
           foregroundPainter: Circle(
-            x_coor: widget.x_coor,
-            y_coor: widget.y_coor,
+            xCoor: widget.xCoor,
+            yCoor: widget.yCoor,
             color: widget.pointColor,
             pointSize: widget.pointSize,
           ),
-        ),
-      ),
+        ),*/
+          FlutterLogo(),
     );
   }
 }
