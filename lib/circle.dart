@@ -16,7 +16,7 @@ class Circle extends CustomPainter {
     Paint line = new Paint();
     line.strokeCap = StrokeCap.round;
     line.color = color;
-    line.strokeWidth = 3.0;
+    line.strokeWidth = pointSize / 2;
     Offset center = new Offset(size.width / 2, size.height / 2);
     double radius = pointSize;
 
@@ -24,7 +24,7 @@ class Circle extends CustomPainter {
     canvas.drawCircle(center, radius, line);
 
     line.style = PaintingStyle.stroke;
-    canvas.drawCircle(center, radius * 3, line);
+    canvas.drawCircle(center, radius * 4, line);
   }
 
   @override
