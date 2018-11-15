@@ -22,7 +22,7 @@ class BlinkingPoint extends StatelessWidget {
         width: 100.0,
         child: new CustomPaint(
           foregroundPainter: Circle(
-            lineColor: Colors.amber,
+            color: Colors.amber,
             pointSize: 10.0,
           ),
         ),
