@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
       xCoor: 100.0,
       yCoor: 500.0,
       pointColor: Colors.yellow,
-      pointSize: 20.0,
+      pointSize: 10.0,
     );
     // return new LmaoApp(
     //   xCoor: 100.0,

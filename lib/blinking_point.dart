@@ -28,11 +28,12 @@ class BlinkingPointState extends State<BlinkingPoint>
   void initState() {
     super.initState();
     animationController = AnimationController(
-      duration: Duration(milliseconds: 5000),
+      duration: Duration(milliseconds: 1000),
       vsync: this,
     );
 
-    animation = Tween(begin: 0.0, end: 20.0).animate(animationController);
+    animation = Tween(begin: 0.0, end: widget.pointSize * 4)
+        .animate(animationController);
     animation.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         animationController.reverse();
@@ -49,6 +50,7 @@ class BlinkingPointState extends State<BlinkingPoint>
       xCoor: widget.xCoor,
       yCoor: widget.yCoor,
       pointColor: widget.pointColor,
+      pointSize: widget.pointSize,
       animation: animation,
     );
   }
