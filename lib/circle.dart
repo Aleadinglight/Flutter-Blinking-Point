@@ -7,11 +7,14 @@ class Circle extends CustomPainter {
   final double pointSize;
   final double xCoor;
   final double yCoor;
+  final double blinkRadius;
+
   Circle({
     this.color,
     this.pointSize,
     this.xCoor,
     this.yCoor,
+    this.blinkRadius,
   });
 
   @override

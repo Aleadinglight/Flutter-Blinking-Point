@@ -39,9 +39,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return new BlinkingPoint(
-      xCoor: 200.0,
+      xCoor: 100.0,
       yCoor: 500.0,
-      pointColor: Colors.red,
+      pointColor: Colors.yellow,
       pointSize: 20.0,
     );
     // return new LmaoApp(

@@ -46,6 +46,9 @@ class BlinkingPointState extends State<BlinkingPoint>
   @override
   Widget build(BuildContext context) {
     return LogoAnimation(
+      xCoor: widget.xCoor,
+      yCoor: widget.yCoor,
+      pointColor: widget.pointColor,
       animation: animation,
     );
   }
@@ -58,8 +61,19 @@ class BlinkingPointState extends State<BlinkingPoint>
 }
 
 class LogoAnimation extends AnimatedWidget {
-  LogoAnimation({Key key, Animation animation})
-      : super(key: key, listenable: animation);
+  final double xCoor;
+  final double yCoor;
+  final Color pointColor;
+  final double pointSize;
+
+  LogoAnimation({
+    Key key,
+    Animation animation,
+    this.xCoor,
+    this.yCoor,
+    this.pointColor,
+    this.pointSize,
+  }) : super(key: key, listenable: animation);
 
   @override
   Widget build(BuildContext context) {
@@ -67,10 +81,11 @@ class LogoAnimation extends AnimatedWidget {
     print(animation.value);
     return new CustomPaint(
       foregroundPainter: Circle(
-        xCoor: 200.0,
-        yCoor: 500.0,
-        color: Colors.red,
-        pointSize: animation.value,
+        xCoor: xCoor,
+        yCoor: yCoor,
+        color: pointColor,
+        pointSize: pointSize,
+        blinkRadius: animation.value,
       ),
     );
   }
