@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:blinking_point/blink_point.dart';
-import 'package:blinking_point/load_state.dart';
+import 'package:blinking_point/blinking_point.dart';
 
 void main() => runApp(new MyApp());
 
@@ -39,12 +38,17 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    /*return new BlinkingPoint(
+    return new BlinkingPoint(
       xCoor: 200.0,
       yCoor: 500.0,
       pointColor: Colors.red,
       pointSize: 20.0,
-    );*/
-    return new LmaoApp();
+    );
+    // return new LmaoApp(
+    //   xCoor: 100.0,
+    //   yCoor: 600.0,
+    //   pointColor: Colors.red,
+    //   pointSize: 20.0,
+    // );
   }
 }

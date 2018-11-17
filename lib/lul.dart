@@ -27,7 +27,7 @@ class BlinkingPoint extends StatefulWidget {
 
 class _BlinkingPointState extends State<BlinkingPoint>
     with SingleTickerProviderStateMixin {
-  Animation<double> animation;
+  Animation animation;
   AnimationController animationController;
 
   @override
@@ -48,26 +48,34 @@ class _BlinkingPointState extends State<BlinkingPoint>
   }
 
   @override
+  Widget build(BuildContext context) {
+    return LogoAnimation(
+      animation: animation,
+    );
+  }
+
+  @override
   void dispose() {
     animationController.dispose();
     super.dispose();
   }
+}
+
+class LogoAnimation extends AnimatedWidget {
+  LogoAnimation({Key key, Animation animation})
+      : super(key: key, listenable: animation);
 
   @override
   Widget build(BuildContext context) {
-    return new Container(
-      height: animation.value,
-      width: animation.value,
-      child:
-          /*new CustomPaint(
-          foregroundPainter: Circle(
-            xCoor: widget.xCoor,
-            yCoor: widget.yCoor,
-            color: widget.pointColor,
-            pointSize: widget.pointSize,
-          ),
-        ),*/
-          FlutterLogo(),
+    Animation animation = listenable;
+    print(animation.value);
+    return new CustomPaint(
+      foregroundPainter: Circle(
+        xCoor: 200.0,
+        yCoor: 500.0,
+        color: Colors.red,
+        pointSize: animation.value,
+      ),
     );
   }
 }

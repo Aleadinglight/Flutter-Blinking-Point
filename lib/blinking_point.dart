@@ -2,12 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
 import 'package:blinking_point/circle.dart';
 
-class LmaoApp extends StatefulWidget {
+class BlinkingPoint extends StatefulWidget {
+  final double xCoor;
+  final double yCoor;
+  final Color pointColor;
+  final double pointSize;
+
+  BlinkingPoint({
+    this.xCoor,
+    this.yCoor,
+    this.pointColor,
+    this.pointSize,
+  });
+
   @override
-  LmaoAppState createState() => new LmaoAppState();
+  BlinkingPointState createState() => new BlinkingPointState();
 }
 
-class LmaoAppState extends State<LmaoApp> with SingleTickerProviderStateMixin {
+class BlinkingPointState extends State<BlinkingPoint>
+    with SingleTickerProviderStateMixin {
   Animation animation;
   AnimationController animationController;
 
@@ -15,7 +28,7 @@ class LmaoAppState extends State<LmaoApp> with SingleTickerProviderStateMixin {
   void initState() {
     super.initState();
     animationController = AnimationController(
-      duration: Duration(milliseconds: 500),
+      duration: Duration(milliseconds: 5000),
       vsync: this,
     );
 
@@ -51,6 +64,7 @@ class LogoAnimation extends AnimatedWidget {
   @override
   Widget build(BuildContext context) {
     Animation animation = listenable;
+    print(animation.value);
     return new CustomPaint(
       foregroundPainter: Circle(
         xCoor: 200.0,
@@ -59,12 +73,5 @@ class LogoAnimation extends AnimatedWidget {
         pointSize: animation.value,
       ),
     );
-    // return Center(
-    //   child: Container(
-    //     height: animation.value,
-    //     width: animation.value,
-    //     child: FlutterLogo(),
-    //   ),
-    // );
   }
 }
