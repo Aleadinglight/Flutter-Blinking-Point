@@ -36,7 +36,7 @@ class BlinkingPointState extends State<BlinkingPoint>
         .animate(animationController);
     animation.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        animationController.reverse();
+        animationController.reset();
       } else if (status == AnimationStatus.dismissed) {
         animationController.forward();
       }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
 import 'dart:ui';
 
 class Circle extends CustomPainter {
@@ -25,10 +24,10 @@ class Circle extends CustomPainter {
     line.color = color;
     line.strokeWidth = pointSize / 2;
     Offset center = new Offset(xCoor, yCoor / 2);
-    double pointRadius = pointSize;
+    double pointRadius = pointSize / 2;
 
     line.style = PaintingStyle.fill;
-    canvas.drawCircle(center, pointRadius - blinkRadius / 10, line);
+    canvas.drawCircle(center, pointRadius, line);
 
     line.style = PaintingStyle.stroke;
     canvas.drawCircle(center, blinkRadius, line);

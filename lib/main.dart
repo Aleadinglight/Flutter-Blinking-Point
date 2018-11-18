@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return new BlinkingPoint(
       xCoor: 100.0,
       yCoor: 500.0,
-      pointColor: Colors.yellow,
+      pointColor: Colors.red,
       pointSize: 10.0,
     );
     // return new LmaoApp(
