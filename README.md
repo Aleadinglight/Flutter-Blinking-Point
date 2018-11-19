@@ -1,8 +1,12 @@
-# blinking_point
+# Blinking point
 
-A new Flutter project.
+Easy way to create a blinking point for your project.
 
-## Getting Started
+## Demo
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+
+## Installation
+
+For now just download blinking_point.dart and circle.dart to your `/lib`. I will try to add it to the flutter library as soon as I could.
+
+## 
