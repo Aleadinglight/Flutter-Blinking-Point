@@ -41,20 +41,20 @@ class _MyHomePageState extends State<MyHomePage> {
     return new Stack(
       children: [
         new BlinkingPoint(
-          xCoor: 100.0,
-          yCoor: 500.0,
+          xCoor: 200.0,
+          yCoor: 350.0,
           pointColor: Colors.red,
           pointSize: 10.0,
         ),
         new BlinkingPoint(
-          xCoor: 100.0,
+          xCoor: 200.0,
           yCoor: 700.0,
           pointColor: Colors.yellow,
           pointSize: 10.0,
         ),
         new BlinkingPoint(
-          xCoor: 100.0,
-          yCoor: 900.0,
+          xCoor: 200.0,
+          yCoor: 1050.0,
           pointColor: Colors.blue,
           pointSize: 10.0,
         ),
