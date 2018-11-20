@@ -80,7 +80,6 @@ class LogoAnimation extends AnimatedWidget {
   @override
   Widget build(BuildContext context) {
     Animation animation = listenable;
-    print(animation.value);
     return new CustomPaint(
       foregroundPainter: Circle(
         xCoor: xCoor,

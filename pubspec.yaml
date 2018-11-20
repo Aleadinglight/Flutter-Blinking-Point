@@ -1,5 +1,7 @@
 name: blinking_point
-description: A new Flutter project.
+description: Create a blinking point for navigating purpose.
+author: Tam Nguyen <huutamnguyen2302@gmail.com>
+homepage: https://github.com/Aleadinglight/Flutter-Blinking-Point
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43

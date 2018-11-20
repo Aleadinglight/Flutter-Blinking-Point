@@ -38,12 +38,29 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return new BlinkingPoint(
-      xCoor: 100.0,
-      yCoor: 500.0,
-      pointColor: Colors.red,
-      pointSize: 10.0,
+    return new Stack(
+      children: [
+        new BlinkingPoint(
+          xCoor: 100.0,
+          yCoor: 500.0,
+          pointColor: Colors.red,
+          pointSize: 10.0,
+        ),
+        new BlinkingPoint(
+          xCoor: 100.0,
+          yCoor: 700.0,
+          pointColor: Colors.yellow,
+          pointSize: 10.0,
+        ),
+        new BlinkingPoint(
+          xCoor: 100.0,
+          yCoor: 900.0,
+          pointColor: Colors.blue,
+          pointSize: 10.0,
+        ),
+      ],
     );
+
     // return new LmaoApp(
     //   xCoor: 100.0,
     //   yCoor: 600.0,
