@@ -4,7 +4,7 @@ Easy way to create a blinking point for your project.
 
 ## Demo
 
-<img src="demo.gif" width="100" />
+<img src="demo.gif" width="250" />
 
 ## Installation
 
