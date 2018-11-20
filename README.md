@@ -2,10 +2,6 @@
 
 Easy way to create a blinking point for your project.
 
-## Demo
-
-<img src="demo.gif" width="250" />
-
 ## Installation
 
 For now just download blinking_point.dart and circle.dart to your `/lib`. I will try to add it to the flutter library as soon as I could.
@@ -28,3 +24,7 @@ new BlinkingPoint(
     pointSize: 10.0, // The size of the point
 );
 ```
+
+## Demo
+
+<img src="demo.gif" width="250" />
