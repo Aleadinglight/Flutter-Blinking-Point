@@ -4,14 +4,19 @@ Easy way to create a blinking point for your project.
 
 ## Installation
 
-For now just download blinking_point.dart and circle.dart to your `/lib`. I will try to add it to the flutter library as soon as I could.
+Add this to your package's pubspec.yaml file:
+
+```yaml
+dependencies:
+  blinking_point: ^1.0.0+2
+```
 
 ## Usage
 
 Import the file.
 
 ```dart
-import 'package:your_directory/blinking_point.dart';
+import 'package:blinking_point/blinking_point.dart';
 ```
 
 Calling the point: 
