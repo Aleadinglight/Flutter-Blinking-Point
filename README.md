@@ -1,6 +1,6 @@
 # Blinking point
 
-Easy way to create a blinking point for your project.
+Easy way to create a blinking point for your Flutter project.
 
 ## Installation
 
