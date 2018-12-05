@@ -32,4 +32,4 @@ new BlinkingPoint(
 
 ## Demo
 
-<img src="demo.gif" width="250" />
+![Demo](../master/blinking.gif)
