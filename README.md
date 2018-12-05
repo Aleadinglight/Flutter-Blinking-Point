@@ -8,7 +8,7 @@ Add this to your package's pubspec.yaml file:
 
 ```yaml
 dependencies:
-  blinking_point: ^1.0.0+2
+  blinking_point: ^1.0.0+5
 ```
 
 ## Usage
